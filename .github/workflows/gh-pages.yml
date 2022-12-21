@@ -28,9 +28,16 @@ defaults:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 #permissions:
-#  contents: read
+permissions: write-all
+
+#permissions:
 #  pages: write
 #  id-token: write
+#  issues: write
+#  pull-requests: write
+#  contents: write
+#  repository-projects: write
+
 
 jobs:
   # Build job
@@ -76,19 +83,33 @@ jobs:
 #        uses: actions/upload-pages-artifact@v1
 #        with:
 #          path: ./public
-      - name: Push file
+#      - name: Push file
+#        env:
+#          MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+#        run: |
+#          cd ./public && git init && git add .
+#          git config --global user.name "SuCicada"
+#          git config --global user.email "pengyifu@gmail.com"
+#          repo="https://SuCicada:${{ secrets.MY_GITHUB_TOKEN }}@github.com/SuCicada/blog.git"
+#          git branch -m master
+#          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+#          git remote add origin $repo
+#          git remote set-url origin $repo
+#          git push --force origin master
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd ./public && git init && git add .
-          git config user.name "SuCicada"
-          git config user.email "pengyifu@gmail.com"
-          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          repo="https://oauth2:${{ secrets.GITHUB_TOKEN }}@github.com/SuCicada/blog.git"
-          git remote add origin $repo
-          git push --force origin master
+#          SSH_DEPLOY_KEY: ${{ secrets.MY_GITHUB_TOKEN }}
+          API_TOKEN_GITHUB: ${{ secrets.MY_GITHUB_TOKEN }}
+        with:
+          source-directory: 'public'
+          destination-github-username: 'SuCicada'
+          destination-repository-name: 'blog'
+          user-email: pengyifu@gmail.com
+          target-branch: master
+#          git config --unset-all http.https://github.com/.extraheader
 
-#      - name: deploy
+#      - name: deployf
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ##          PAT: ${{ secrets.PAT }}
