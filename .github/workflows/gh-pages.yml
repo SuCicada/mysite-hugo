@@ -7,7 +7,7 @@ on:
       - "LICENSE"
       - "README.md"
     branches:
-      - su_dev
+      - master
   workflow_dispatch:
     # manual run
     inputs:
@@ -36,7 +36,7 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
+#    env:
 #      HUGO_VERSION: "0.83.0"
     steps:
 #      - name: Check version
