@@ -13,6 +13,7 @@ buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
 # googleAnalytics: UA-123-45
+disqusShortname: sucicada
 
 minify:
   disableXML: true
@@ -49,11 +50,11 @@ outputs:
     - JSON
 
 params:
+  comments: true
   dateFormat: 2006-01-02
   ShareButtons:
     - twitter
     - telegram
-
 
   Toc: true
   showtoc: true
