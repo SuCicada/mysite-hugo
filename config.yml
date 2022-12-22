@@ -113,7 +113,7 @@ params:
       url: "index.xml"
 
   editPost:
-    URL: "https://github.com/SuCicada/mysite-hugo/content"
+    URL: "https://github.com/SuCicada/mysite-hugo/blob/master/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
