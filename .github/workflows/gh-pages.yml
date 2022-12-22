@@ -96,11 +96,11 @@ jobs:
 #          git remote add origin $repo
 #          git remote set-url origin $repo
 #          git push --force origin master
+#          SSH_DEPLOY_KEY: ${{ secrets.MY_GITHUB_TOKEN }}
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
-#          SSH_DEPLOY_KEY: ${{ secrets.MY_GITHUB_TOKEN }}
-          API_TOKEN_GITHUB: ${{ secrets.MY_GITHUB_TOKEN }}
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-directory: 'public'
           destination-github-username: 'SuCicada'
