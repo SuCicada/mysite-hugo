@@ -1,6 +1,6 @@
 baseURL: "https://sucicada.github.io/blog"  # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 title: SuCicada
-paginate: 5
+paginate: 20
 theme: hugo-PaperMod
 #theme: test
 
@@ -29,18 +29,18 @@ languages:
     menu:
       main:
         - name: Archive
-          url: archives
+          url: /archives/
           weight: 5
         - name: Search
-          url: search/
+          url: /search/
           weight: 10
         - name: Tags
           url: /tags/
           weight: 10
-        - name: WiKi
-          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
-        - name: Discord
-          url: https://discord.gg/ahpmTvhVmp
+        - name: About
+          url: /about/
+#        - name: Discord
+#          url: https://discord.gg/ahpmTvhVmp
 
 outputs:
   home:
@@ -49,6 +49,7 @@ outputs:
     - JSON
 
 params:
+  dateFormat: 2006-01-02
   ShareButtons:
     - twitter
     - telegram
@@ -58,14 +59,14 @@ params:
   showtoc: true
   tocopen: true
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  description: "SuCicada - https://github.com/SuCicada"
   author: SuCicada
   # author: ["Me", "You"] # multiple authors
 
   defaultTheme: auto
   # disableThemeToggle: true
   ShowShareButtons: true
-  ShowReadingTime: true
+  ShowReadingTime: false
   # disableSpecial1stPost: true
   displayFullLangName: true
   ShowPostNavLinks: true
@@ -90,15 +91,17 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "PaperMod"
+    Title: >
+        SuCicada
     Content: >
-      Welcome to demo of hugo's theme PaperMod.
-      
-      - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
-      
-      - Do give a 🌟 on Github !
-      
-      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+        <div style="text-align: center;" >
+          <h2> 我们的教条是: </h2>
+          <ul><br/>
+            <li><h3> ◦ 经历苦痛才可抵达乐园。 </h3></li><br/>
+            <li><h3> ◦ 思考是人生成功的源泉。 </h3></li><br/>
+            <li><h3> ◦ 清楚的知道你要做什么。 </h3></li><br/>
+          </ul>
+        </div>
 
   socialIcons:
     - name: github
@@ -109,7 +112,7 @@ params:
       url: "index.xml"
 
   editPost:
-    URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+    URL: "https://github.com/SuCicada/mysite-hugo/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 

@@ -4,7 +4,9 @@ git submodule add -f git@github.com:SuCicada/Su-hugo-PaperMod.git themes/hugo-Pa
 git submodule update --init --recursive
 ```
 
-## hugo 
+## hugo
+please use su-hugo
+ 
 ```bash
 git clone https://github.com/SuCicada/su-hugo.git 
 cd su-hugo
@@ -14,5 +16,5 @@ go install
 
 ## dev
 ```bash
-su-hugo serve   --renderToDisk --disableFastRender
+su-hugo serve --disableFastRender
 ```

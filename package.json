@@ -1,0 +1,14 @@
+{
+  "name": "mysite-hugo",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "su-hugo serve --disableFastRender",
+    "build": "su-hugo --buildDrafts --gc --verbose",
+    "clean": "rm -r public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuCicada/mysite-hugo.git"
+  },
+  "author": "SuCicada"
+}
