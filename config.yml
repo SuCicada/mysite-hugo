@@ -51,7 +51,7 @@ outputs:
 
 params:
   comments: true
-  dateFormat: 2006-01-02 15:04:05
+  dateFormat: 2006-01-02 15:04:00
   ShareButtons:
     - twitter
     - telegram
