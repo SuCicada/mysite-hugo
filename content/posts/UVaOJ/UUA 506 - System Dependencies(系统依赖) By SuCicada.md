@@ -1,3 +1,6 @@
+---
+date: 2020/09/20
+---
 >例题6-21 系统依赖（System Dependencies, ACM/ICPC World Finals 1997, UVa506）
 软件组件之间可能会有依赖关系，例如，TELNET和FTP都依赖于TCP/IP。你的任务是
 模拟安装和卸载软件组件的过程。首先是一些DEPEND指令，说明软件之间的依赖关系（保
