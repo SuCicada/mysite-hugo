@@ -2,4 +2,5 @@
 title: "About"
 layout: "abouts"
 ---
-asdfasdfa
+
+自己紹介がありません
